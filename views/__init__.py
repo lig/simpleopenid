@@ -7,7 +7,6 @@ from django.views.generic.simple import direct_to_template
 from django.utils.translation import ugettext as _
 
 from ..auth.backends import COMPLETE
-from ..forms import OpendIDLoginForm, PrettyOpendIDLoginForm
 from ..models import Provider
 
 from generic import openid_login as generic_openid_login
@@ -35,9 +34,10 @@ def openid_complete(request):
 
 
 def openid_login(request):
+    from ..forms import OpendIDLoginForm, PrettyOpenIDLoginForm
     
     if 'provider' in request.POST:
-        form_class = PrettyOpendIDLoginForm
+        form_class = PrettyOpenIDLoginForm
     else:
         form_class = OpendIDLoginForm
     
