@@ -1,0 +1,131 @@
+# Russian translation of django-simpleopenid.
+# Copyright (C) 2009 Serge Matveenko
+# This file is distributed under the same license as the django-simpleopenid package.
+# Serge Matveenko <s@matveenko.ru>, 2009.
+# , fuzzy
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: django-simpleopenid 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-06-25 14:58+0400\n"
+"PO-Revision-Date: 2009-06-25 15:09+0400\n"
+"Last-Translator: Serge Matveenko <s@matveenko.ru>\n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: forms.py:24
+msgid "Login as user of the"
+msgstr "Войти как пользователь"
+
+#: forms.py:33
+msgid "Enter your OpenID name"
+msgstr "Введите ваш OpenID"
+
+#: models.py:15 models.py:41
+msgid "identity server URL"
+msgstr "URL идентификационного сервера"
+
+#: models.py:16
+msgid "association handle"
+msgstr "псевдоним ассоциации"
+
+#: models.py:17
+msgid "association secret"
+msgstr "секретный ключ ассоциации"
+
+#: models.py:18
+msgid "association issued time"
+msgstr "время установки ассоциации"
+
+#: models.py:19
+msgid "association lifetime (seconds)"
+msgstr "время жизни ассоциации (секунды)"
+
+#: models.py:20
+msgid "association type"
+msgstr "тип ассоциации"
+
+#: models.py:21
+msgid "association expired time"
+msgstr "время устаревания ассоциации"
+
+#: models.py:32
+msgid "server association"
+msgstr "ассоциация с сервером"
+
+#: models.py:33
+msgid "server associations"
+msgstr "ассоциации с серверами"
+
+#: models.py:42
+msgid "nonce use time"
+msgstr "время использования случая"
+
+#: models.py:43
+msgid "nonce salt"
+msgstr "\"соль\" случая"
+
+#: models.py:49
+msgid "nonce"
+msgstr "случай"
+
+#: models.py:50
+msgid "nonces"
+msgstr "случаи"
+
+#: models.py:60
+msgid "Identity user"
+msgstr "пользователь идентификации"
+
+#: models.py:61
+msgid "identity url"
+msgstr "url идентификации"
+
+#: models.py:70
+msgid "identity"
+msgstr "идентификация"
+
+#: models.py:71
+msgid "identities"
+msgstr "идентификации"
+
+#: models.py:80
+msgid "provider name"
+msgstr "имя провайдера"
+
+#: models.py:81
+msgid "provider public url"
+msgstr "публичный url провайдера"
+
+#: models.py:82
+msgid "provider service url pattern"
+msgstr "шаблон сервисного url провайдера"
+
+#: models.py:83
+msgid "use $username for username insertion"
+msgstr "используйте $username для вставки username"
+
+#: models.py:84
+msgid "is service url needs username"
+msgstr "требуется ли указание username в url"
+
+#: models.py:86
+msgid "provider ordering field"
+msgstr "порядковый номер провайдера"
+
+#: models.py:95
+msgid "OpenID provider"
+msgstr "провайдер OpenID"
+
+#: models.py:96
+msgid "OpenID providers"
+msgstr "провайдеры OpenID"
+
+#: views/__init__.py:28
+msgid "You are logged in."
+msgstr "Вы авторизованы"
+
