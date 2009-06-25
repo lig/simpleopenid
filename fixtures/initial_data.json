@@ -1,0 +1,35 @@
+[
+  {
+    "pk": 1, 
+    "model": "simpleopenid.provider", 
+    "fields": {
+      "needs_username": false, 
+      "public_url": "http://yandex.ru/", 
+      "service_url": "http://yandex.ru/", 
+      "name": "\u042fndex", 
+      "num": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "simpleopenid.provider", 
+    "fields": {
+      "needs_username": true, 
+      "public_url": "http://livejournal.com/", 
+      "service_url": "http://$username.livejournal.com/", 
+      "name": "LiveJournal", 
+      "num": 2
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "simpleopenid.provider", 
+    "fields": {
+      "needs_username": false, 
+      "public_url": "http://google.com/", 
+      "service_url": "https://www.google.com/accounts/o8/id", 
+      "name": "Google", 
+      "num": 3
+    }
+  }
+]
