@@ -1,13 +1,5 @@
-'''
-Created on 27.04.2009
-
-@author: lig
-'''
-
 from django.contrib import admin
 
-from models import Identity, ModelAssociation, Nonce
+from models import Identity, ModelAssociation, Nonce, Provider
 
-admin.site.register(Identity)
-admin.site.register(ModelAssociation)
-admin.site.register(Nonce)
+admin.site.register((Identity, ModelAssociation, Nonce, Provider,))
