@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{% url openid-login %}" method="post">{{ openid_login_form }}</form>
+
+{% endblock content %}

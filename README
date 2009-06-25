@@ -1,0 +1,44 @@
+This is short developer instructions for django-simpleopenid library.
+Project home page: http://sourceforge.net/projects/simpleopenid/
+
+To use django-simpleopenid you must add following in your Django settings
+module:
+
+""" You must have AuthenticationMiddleware enabled """
+MIDDLEWARE_CLASSES = (
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'core.middleware.NoSelfLinksMiddleware',
+)
+
+""" You must add 'simpleopenid' to installed apps. Feel free to put it into
+any folder or even rename its folder. """
+INSTALLED_APPS = (
+    'simpleopenid',
+)
+
+""" You must add 'simpleopenid.auth.backends.OpenIDBackend' to your
+authentication backedns. You must provide default ModelBackend explicit to
+let work ordinary user/password authentication work. """
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'simpleopenid.auth.backends.OpenIDBackend',
+)
+
+The you must run 'python manage.py syncdb' in your project folder.
+
+
+After setting up django-simpleopenid you could use it in several ways:
+
+1. Add urls patterns from urls_sample/py file to your urls.py and use form
+classes from simpleopenid.forms to authenticate users. All forms return
+redirect to user profile on success or to 'index' url on fail.
+New users are creating automaticaly.
+There are url named 'openid-login' that you could use as entry point.
+You might need to make your own 'openid/login.html' template using
+'openid_login_form' template variable for form instance.
+
+2. Use 'contrib.auth.authenticate' in to steps. Look into docstrings of the
+'simpleopenid.auth.backends.OpenIDBackend.authenticate' method for more
+info.
