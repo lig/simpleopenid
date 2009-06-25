@@ -80,7 +80,8 @@ class Provider(models.Model):
     name = models.CharField(_('provider name'), max_length=32, unique=True)
     public_url = models.URLField(_('provider public url'), max_length=255)
     service_url = models.CharField(_('provider service url pattern'),
-        max_length=255, help_text=_('use $username for username insertion'))
+        max_length=255, blank=True,
+        help_text=_('use $username for username insertion'), )
     needs_username = models.BooleanField(_('is service url needs username'),
         default=True)
     num = models.IntegerField(_('provider ordering field'), default=0)

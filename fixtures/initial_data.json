@@ -31,5 +31,16 @@
       "name": "Google", 
       "num": 3
     }
+  }, 
+  {
+    "pk": 4, 
+    "model": "simpleopenid.provider", 
+    "fields": {
+      "needs_username": true, 
+      "public_url": "http://openid.net/", 
+      "service_url": "$username", 
+      "name": "OpenID", 
+      "num": 100
+    }
   }
 ]
