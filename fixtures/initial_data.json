@@ -27,7 +27,7 @@
     "fields": {
       "needs_username": false, 
       "public_url": "http://google.com/", 
-      "service_url": "https://www.google.com/accounts/o8/id", 
+      "service_url": "http://openid-provider.appspot.com/", 
       "name": "Google", 
       "num": 3
     }
