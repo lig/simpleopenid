@@ -26,7 +26,7 @@ AUTHENTICATION_BACKENDS = (
     'simpleopenid.auth.backends.OpenIDBackend',
 )
 
-The you must run 'python manage.py syncdb' in your project folder.
+Then you must run 'python manage.py syncdb' in your project folder.
 
 
 After setting up django-simpleopenid you could use it in several ways:
