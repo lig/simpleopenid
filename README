@@ -1,5 +1,5 @@
 This is short developer instructions for django-simpleopenid library.
-Project home page: http://sourceforge.net/projects/simpleopenid/
+Project home page: http://lig.github.com/simpleopenid
 
 To use django-simpleopenid you must add following in your Django settings
 module:
