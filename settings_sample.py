@@ -13,3 +13,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'simpleopenid.auth.backends.OpenIDBackend',
 )
+
+# Set to True if you know what are you doing.
+SIMPLEOPENID_FORCE_PRETTY_FORM = False
+

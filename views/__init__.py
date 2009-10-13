@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
 from django.core.serializers import json
@@ -36,7 +37,7 @@ def openid_complete(request):
 def openid_login(request):
     from ..forms import OpendIDLoginForm, PrettyOpenIDLoginForm
     
-    if 'provider' in request.POST:
+    if settings.SIMPLEOPENID_FORCE_PRETTY_FORM or 'provider' in request.POST:
         form_class = PrettyOpenIDLoginForm
     else:
         form_class = OpendIDLoginForm
