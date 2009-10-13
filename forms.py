@@ -6,8 +6,8 @@ from django.core.urlresolvers import reverse
 
 from models import Provider
 
-
 __all__ = ['OpendIDLoginForm', 'PrettyOpenIDLoginForm',]
+
 
 class OpendIDLoginForm(forms.Form):
     """
@@ -27,14 +27,15 @@ class PrettyOpenIDLoginForm(forms.Form):
         widget=forms.HiddenInput)
     openid_url = forms.URLField(required=False, widget=forms.HiddenInput)
     
-    def clean_openid_username(self):
+    def clean(self):
+        
+        if not 'provider' in self.cleaned_data:
+            raise forms.ValidationError(_('Choose your OpenID provider'))
+        
         if (self.cleaned_data['provider'].needs_username and
                 not self.cleaned_data['openid_username']):
             raise forms.ValidationError(_('Enter your OpenID name'))
-        else:
-            return self.cleaned_data['openid_username']
-    
-    def clean(self):
+        
         self.cleaned_data['openid_url'] = Template(
             self.cleaned_data['provider'].service_url).safe_substitute(
                 username=self.cleaned_data['openid_username'])
